@@ -19,20 +19,20 @@ string gerarString(int comprimento) {
 
 int main(){
 
-  int chave[1000];
-  for(int i = 0; i < 1000; i++){
+  int chave[50000];
+  for(int i = 0; i < 50000; i++){
     chave[i] = rand();
   }
 
-  int dado1[1000];
-  for(int i = 0; i < 1000; i++){
+  int dado1[50000];
+  for(int i = 0; i < 50000; i++){
     dado1[i] = i;
   }
   srand(time(nullptr)); 
 
   ofstream outfile ("teste.txt");
 
-  for(int i = 0; i < 1000; i++){
+  for(int i = 0; i < 50000; i++){
   outfile << chave[i]<< " , "<<dado1[i]<< " , " << gerarString(1000) << endl;
   }
 }
