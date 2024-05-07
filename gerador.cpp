@@ -19,20 +19,27 @@ string gerarString(int comprimento) {
 
 int main(){
 
-  int chave[50000];
-  for(int i = 0; i < 50000; i++){
-    chave[i] = rand();
+  int x = 0;
+  cout << "Digite a quantidade de registros que voce quer: ";
+  cin >> x;
+
+  random_device rd;
+  mt19937 gen(rd());
+  uniform_int_distribution<int> dis(0, 1000000);
+
+  int chave[x];
+  for(int i = 0; i < x; i++){
+    chave[i] = dis(gen);
   }
 
-  int dado1[50000];
-  for(int i = 0; i < 50000; i++){
+  int dado1[x];
+  for(int i = 0; i < x; i++){
     dado1[i] = i;
   }
-  srand(time(nullptr)); 
 
   ofstream outfile ("teste.txt");
 
-  for(int i = 0; i < 50000; i++){
+  for(int i = 0; i < x; i++){
   outfile << chave[i]<< " , "<<dado1[i]<< " , " << gerarString(1000) << endl;
   }
 }
