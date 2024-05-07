@@ -43,12 +43,20 @@ int main(){
     dado1[i] = i;
   }
 
-  //Cria um arquivo .txt
-  ofstream outfile ("teste.txt");
+  
+  //Cria um arquivo .txt com
+  ofstream um (to_string(x) + "_registros_desordenados.txt");
 
   //Preenche o arquivo .txt com uma chave aleatória, o numero de ordem do registro e uma string aleatória respectivamente
   for(int i = 0; i < x; i++){
-  outfile << chave[i]<< " , "<<dado1[i]<< " , " << gerarString(1000) << endl;
+  um << chave[i]<< " , "<<dado1[i]<< " , " << gerarString(1000) << endl;
   }
+  ofstream dois (to_string(x) + "_registros_ordenados.txt");
+
+  //Preenche o arquivo .txt com uma chave aleatória, o numero de ordem do registro e uma string aleatória respectivamente
+  for(int i = 0; i < x; i++){
+  dois << dado1[i]<< " , "<<dado1[i]<< " , " << gerarString(1000) << endl;
+  }
+
 }
 
