@@ -53,7 +53,7 @@ int main(){
   }
   ofstream dois (to_string(x) + "_registros_ordenados.txt");
 
-  //Preenche o arquivo .txt com uma chave aleatória, o numero de ordem do registro e uma string aleatória respectivamente
+  //Preenche o arquivo .txt com uma chave ordenada, o numero de ordem do registro e uma string aleatória respectivamente
   for(int i = 0; i < x; i++){
   dois << dado1[i]<< " , "<<dado1[i]<< " , " << gerarString(1000) << endl;
   }
