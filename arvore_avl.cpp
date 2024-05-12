@@ -224,7 +224,7 @@ int main() {
     arv.raiz = nullptr;
 
     // para especificar o nome do arquivo que vai ser aberto
-    nomeArquivo = "100_registros_ordenados.txt";
+    nomeArquivo = "100_registros_desordenados.txt";
     
     ifstream arquivo("../Arquivos de Entrada/"+nomeArquivo);
 
