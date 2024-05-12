@@ -43,7 +43,7 @@ int main(){
     dado1[i] = i;
   }
 
-  string caminho = "./Arquivos de Entrada/";
+  string caminho = "../Arquivos de Entrada/";
   
   //Cria um arquivo .txt com no diretorio correto
   ofstream registros_desordenados (caminho + to_string(x) + "_registros_desordenados.txt");
@@ -51,14 +51,14 @@ int main(){
   if(registros_desordenados.is_open()){
     //Preenche o arquivo .txt com uma chave aleatória, o numero de ordem do registro e uma string aleatória respectivamente
     for(int i = 0; i < x; i++){
-    registros_desordenados << chave[i]<< " , "<<dado1[i]<< " , " << gerarString(1000) << endl;
+    registros_desordenados << chave[i]<< "  "<<dado1[i]<< "  " << gerarString(1000) << endl;
     }
     registros_desordenados.close();
     
-    cout << "Arquivo de registros deseornados criado com sucesso e ";
+    cout << "Arquivo de registros deseornados criado com sucesso e " << endl;
   }
   else {
-    cerr << "Erro ao abrir o arquivo de registros desordenados. ";
+    cerr << "Erro ao abrir o arquivo de registros desordenados. " << endl;
   }
 
     ofstream registros_ordenados (caminho + to_string(x) + "_registros_ordenados.txt");
@@ -70,10 +70,10 @@ int main(){
     }
     registros_ordenados.close();
     
-    cout << "Arquivo de registros ordeornado criado com sucesso.";
+    cout << "Arquivo de registros ordeornado criado com sucesso. "<< endl;
   }
   else {
-    cerr << "Erro ao abrir o arquivo de registros ordenados. ";
+    cerr << "Erro ao abrir o arquivo de registros ordenados. "<< endl;
   }
 
 }
