@@ -1,35 +1,4 @@
 .vscode
 
-gerador.exe
 
-100_registros_ordenados.txt
-200_registros_ordenados.txt
-300_registros_ordenados.txt
-400_registros_ordenados.txt
-500_registros_ordenados.txt
-600_registros_ordenados.txt
-700_registros_ordenados.txt
-800_registros_ordenados.txt
-900_registros_ordenados.txt
-1000_registros_ordenados.txt
-500_registros_ordenados.txt
-10000_registros_ordenados.txt
-50000_registros_ordenados.txt
-100000_registros_ordenados.txt
 
-100_registros_desordenados.txt
-200_registros_desordenados.txt
-300_registros_desordenados.txt
-400_registros_desordenados.txt
-500_registros_desordenados.txt
-600_registros_desordenados.txt
-700_registros_desordenados.txt
-800_registros_desordenados.txt
-900_registros_desordenados.txt
-1000_registros_desordenados.txt
-500_registros_desordenados.txt
-10000_registros_desordenados.txt
-50000_registros_desordenados.txt
-100000_registros_desordenados.txt
-
-/output

@@ -61,7 +61,7 @@ int main(){
     cerr << "Erro ao abrir o arquivo de registros desordenados. ";
   }
 
-    ofstream registros_ordenados ("./Arquivos de Saida/" + to_string(x) + "_registros_ordenados.txt");
+    ofstream registros_ordenados (caminho + to_string(x) + "_registros_ordenados.txt");
 
   if(registros_ordenados.is_open()){
     //Preenche o arquivo .txt com uma chave aleatória, o numero de ordem do registro e uma string aleatória respectivamente
