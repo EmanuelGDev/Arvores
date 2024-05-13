@@ -51,7 +51,7 @@ int main(){
   if(registros_desordenados.is_open()){
     //Preenche o arquivo .txt com uma chave aleatória, o numero de ordem do registro e uma string aleatória respectivamente
     for(int i = 0; i < x; i++){
-    registros_desordenados << chave[i]<< "  "<<dado1[i]<< "  " << gerarString(1000) << endl;
+    registros_desordenados << chave[i]<< " "<<dado1[i]<< " " << gerarString(1000) << endl;
     }
     registros_desordenados.close();
     
@@ -66,7 +66,7 @@ int main(){
   if(registros_ordenados.is_open()){
     //Preenche o arquivo .txt com uma chave aleatória, o numero de ordem do registro e uma string aleatória respectivamente
     for(int i = 0; i < x; i++){
-    registros_ordenados << dado1[i]<< " , "<<dado1[i]<< " , " << gerarString(1000) << endl;
+    registros_ordenados << dado1[i]<< " "<<dado1[i]<< " " << gerarString(1000) << endl;
     }
     registros_ordenados.close();
     
