@@ -169,10 +169,10 @@ int main()
 
     //Seed para gerar chaves diferentes
     int i = 0;
-    srand(2112);
     // Realiza operações de busca aleatória na árvore binária
     while (!gerouTodas)
     {
+        srand(i);
         // Gera uma chave aleatória
         if (totalAusente < 15)
         {
@@ -203,7 +203,7 @@ int main()
             if (totalPresente <= 15)
             {
                 // Formata a mensagem e armazena no vetor de chaves encontradas
-                sprintf(buffer, "Chave (%.6d) encontrada na árvore. Tempo de busca: %.9f segundos. Interações: %d", chaveAleatoria, elapsed_time.count(), arv.numero_interacoes);
+                sprintf(buffer, "Chave (%.6d) encontrada na árvore. Tempo de busca: %.9f segundos. Interaçoes: %d", chaveAleatoria, elapsed_time.count(), arv.numero_interacoes);
                 vetorEncontradas[totalPresente - 1] = buffer;
                 totalPresente++;
             }
@@ -213,7 +213,7 @@ int main()
             if (totalAusente <= 15)
             {
                 // Formata a mensagem e armazena no vetor de chaves não encontradas
-                sprintf(buffer, "Chave (%.6d) não encontrada na árvore. Tempo de busca: %.9f segundos. Interações: %d", chaveAleatoria, elapsed_time.count(), arv.numero_interacoes);
+                sprintf(buffer, "Chave (%.6d) não encontrada na arvore. Tempo de busca: %.9f segundos. Interaçoes: %d", chaveAleatoria, elapsed_time.count(), arv.numero_interacoes);
                 vetorNaoEncontradas[totalAusente - 1] = buffer;
                 totalAusente++;
             }
