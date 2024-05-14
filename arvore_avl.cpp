@@ -54,16 +54,14 @@ No *novoNo(Tiporeg pRegistro)
     return no;
 }
 
-struct Arvore_avl
-{
+struct Arvore_avl{
     // Nó raiz
     No *raiz;
 
     // inteiro para contar o número de interações ao buscar uma chave
     int numero_interacoes = 0;
 
-    No *rotacaoDireita(No *y)
-    {
+    No *rotacaoDireita(No *y){
         // 'x' é o nó à esquerda de 'y'
         No *x = y->esquerda;
 
@@ -82,8 +80,7 @@ struct Arvore_avl
         return x;
     }
 
-    No *rotacaoEsquerda(No *x)
-    {
+    No *rotacaoEsquerda(No *x){
         // 'y' é o nó à direita de 'x'
         No *y = x->direita;
 
@@ -102,8 +99,7 @@ struct Arvore_avl
         return y;
     }
 
-    int fatorBalanceamento(No *no)
-    {
+    int fatorBalanceamento(No *no){
         // Se o nó é nulo, retorna 0 (árvore vazia tem fator de balanceamento 0)
         if (no == nullptr)
             return 0;
@@ -112,8 +108,7 @@ struct Arvore_avl
         return altura(no->esquerda) - altura(no->direita);
     }
 
-    No *inserir(No *no, Tiporeg registro)
-    {
+    No *inserir(No *no, Tiporeg registro){
         // Se o nó é nulo, cria um novo nó com o registro fornecido
         if (no == nullptr)
             return novoNo(registro);
