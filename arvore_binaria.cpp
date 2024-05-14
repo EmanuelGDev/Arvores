@@ -2,7 +2,7 @@
 #include <fstream>
 #include <string>
 #include <sstream>
-#include <ctime>
+#include <time.h>
 #include <cstring>
 #include <iomanip>
 #include <chrono>
@@ -168,12 +168,12 @@ int main()
     arquivo.close();
 
     //Seed para gerar chaves diferentes
-    int i = 1;
+    unsigned seed = time(NULL);
     
     // Realiza operações de busca aleatória na árvore binária
     while (!gerouTodas)
     {
-        srand(time(0) + i);
+        srand(seed);
 
         // Gera uma chave aleatória
         if (totalAusente < 15)
@@ -184,7 +184,7 @@ int main()
         {
             chaveAleatoria = rand() % 10000;
         }
-        i++;
+        seed++;
 
         // Reinicia o contador de interações
         arv.numero_interacoes = 0;
