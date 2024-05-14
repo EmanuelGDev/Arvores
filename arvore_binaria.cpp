@@ -205,7 +205,7 @@ int main()
             if (totalPresente <= 15)
             {
                 // Formata a mensagem e armazena no vetor de chaves encontradas
-                sprintf(buffer, "Chave (%.6d) encontrada na árvore. Tempo de busca: %.9f segundos. Interações: %d", chaveAleatoria, elapsed_time.count(), arv.numero_interacoes);
+                sprintf(buffer, "Chave (%.6d) encontrada na árvore. Tempo de busca: %.9f segundos. Interaçoes: %d", chaveAleatoria, elapsed_time.count(), arv.numero_interacoes);
                 vetorEncontradas[totalPresente - 1] = buffer;
                 totalPresente++;
             }
@@ -215,7 +215,7 @@ int main()
             if (totalAusente <= 15)
             {
                 // Formata a mensagem e armazena no vetor de chaves não encontradas
-                sprintf(buffer, "Chave (%.6d) não encontrada na árvore. Tempo de busca: %.9f segundos. Interações: %d", chaveAleatoria, elapsed_time.count(), arv.numero_interacoes);
+                sprintf(buffer, "Chave (%.6d) não encontrada na arvore. Tempo de busca: %.9f segundos. Interaçoes: %d", chaveAleatoria, elapsed_time.count(), arv.numero_interacoes);
                 vetorNaoEncontradas[totalAusente - 1] = buffer;
                 totalAusente++;
             }

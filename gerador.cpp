@@ -21,7 +21,7 @@ int gerar_numero() {
 
 int main() {
     int tamanho;
-    cout << "Qual tamanho de arquivo você deseja criar? (Já vai ser criado ordenado e não ordenado): ";
+    cout << "Qual tamanho de arquivo você deseja criar? (Ja vai ser criado ordenado e nao ordenado): ";
     cin >> tamanho;
 
     vector<int> chaves(tamanho);
