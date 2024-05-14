@@ -9,37 +9,43 @@
 using namespace std;
 
 // Declaração do tipo de registro presente em cada nó
-struct Tiporeg {
+struct Tiporeg
+{
     int chave;
     int dado1;
     char dado2[1000];
 };
 
-// Declaração do tipo de nó 
+// Declaração do tipo de nó
 
-struct No {
+struct No
+{
     Tiporeg registro;
-    No* esquerda;
-    No* direita;
+    No *esquerda;
+    No *direita;
     int altura; // propriedade que retorna a altura do no na arvore
 };
 
-//Função para retornar a altura da arvore
+// Função para retornar a altura da arvore
 
-int altura(No* no) {
+int altura(No *no)
+{
     // essa função retorna a altura do no e é utilizada para pegar o valor máximo do lado direito e esquerdo
-    if (no == nullptr) return 0;
+    if (no == nullptr)
+        return 0;
     return no->altura;
 }
 
 // função para retornar o valor máximo entre duas variáveis
-int maximo(int a, int b) {
-    return (a > b) ? a : b; 
+int maximo(int a, int b)
+{
+    return (a > b) ? a : b;
 }
 
-// Função para retornar o ponteiro para um novo nó 
-No* novoNo(Tiporeg pRegistro) {
-    No* no = new No();
+// Função para retornar o ponteiro para um novo nó
+No *novoNo(Tiporeg pRegistro)
+{
+    No *no = new No();
     no->registro = pRegistro;
     no->esquerda = nullptr;
     no->direita = nullptr;
@@ -47,19 +53,21 @@ No* novoNo(Tiporeg pRegistro) {
     return no;
 }
 
-struct Arvore_avl {
+struct Arvore_avl
+{
     // Nó raiz
-    No* raiz;
+    No *raiz;
 
-    // inteiro para contar o número de interações ao buscar uma chave 
+    // inteiro para contar o número de interações ao buscar uma chave
     int numero_interacoes = 0;
 
-    No* rotacaoDireita(No* y) {
+    No *rotacaoDireita(No *y)
+    {
         // 'x' é o nó à esquerda de 'y'
-        No* x = y->esquerda;
+        No *x = y->esquerda;
 
         // 'T' é a subárvore à direita de 'x'
-        No* T = x->direita;
+        No *T = x->direita;
 
         // Fazendo a rotação à direita
         x->direita = y;
@@ -73,13 +81,13 @@ struct Arvore_avl {
         return x;
     }
 
-
-    No* rotacaoEsquerda(No* x) {
+    No *rotacaoEsquerda(No *x)
+    {
         // 'y' é o nó à direita de 'x'
-        No* y = x->direita;
+        No *y = x->direita;
 
         // 'T' é a subárvore à esquerda de 'y'
-        No* T = y->esquerda;
+        No *T = y->esquerda;
 
         // Fazendo a rotação à esquerda
         y->esquerda = x;
@@ -93,19 +101,21 @@ struct Arvore_avl {
         return y;
     }
 
-
-    int fatorBalanceamento(No* no) {
+    int fatorBalanceamento(No *no)
+    {
         // Se o nó é nulo, retorna 0 (árvore vazia tem fator de balanceamento 0)
-        if (no == nullptr) return 0;
-        
+        if (no == nullptr)
+            return 0;
+
         // Retorna a diferença entre a altura da subárvore esquerda e a altura da subárvore direita
         return altura(no->esquerda) - altura(no->direita);
     }
 
-
-    No* inserir(No* no, Tiporeg registro) {
+    No *inserir(No *no, Tiporeg registro)
+    {
         // Se o nó é nulo, cria um novo nó com o registro fornecido
-        if (no == nullptr) return novoNo(registro);
+        if (no == nullptr)
+            return novoNo(registro);
 
         // Caso a chave do registro seja menor que a chave do nó atual, insere na subárvore esquerda
         if (registro.chave < no->registro.chave)
@@ -130,12 +140,14 @@ struct Arvore_avl {
         if (balance < -1 && registro.chave > no->direita->registro.chave)
             return rotacaoEsquerda(no);
 
-        if (balance > 1 && registro.chave > no->esquerda->registro.chave) {
+        if (balance > 1 && registro.chave > no->esquerda->registro.chave)
+        {
             no->esquerda = rotacaoEsquerda(no->esquerda);
             return rotacaoDireita(no);
         }
 
-        if (balance < -1 && registro.chave < no->direita->registro.chave) {
+        if (balance < -1 && registro.chave < no->direita->registro.chave)
+        {
             no->direita = rotacaoDireita(no->direita);
             return rotacaoEsquerda(no);
         }
@@ -144,20 +156,24 @@ struct Arvore_avl {
         return no;
     }
 
-    bool Buscar(No* no, int chave) {
+    bool Buscar(No *no, int chave)
+    {
         // Se o nó é nulo, a chave não foi encontrada, retorna falso
-        if (no == nullptr) {
+        if (no == nullptr)
+        {
             return false;
         }
         // Se a chave é menor que a chave do nó atual, realiza busca na subárvore esquerda
-        else if (chave < no->registro.chave){
+        else if (chave < no->registro.chave)
+        {
             // Incrementa o número de interações (comparações) realizadas durante a busca
             numero_interacoes++;
             // Chama a função de busca recursivamente na subárvore esquerda
             return Buscar(no->esquerda, chave);
         }
         // Se a chave é maior que a chave do nó atual, realiza busca na subárvore direita
-        else if (chave > no->registro.chave){
+        else if (chave > no->registro.chave)
+        {
             // Incrementa o número de interações (comparações) realizadas durante a busca
             numero_interacoes++;
             // Chama a função de busca recursivamente na subárvore direita
@@ -167,10 +183,10 @@ struct Arvore_avl {
         else
             return true;
     }
-
 };
 
-Tiporeg retornaTipoReg(string s) {
+Tiporeg retornaTipoReg(string s)
+{
     // Cria uma variável do tipo Tiporeg para armazenar os dados extraídos da string
     Tiporeg aux;
 
@@ -199,24 +215,21 @@ Tiporeg retornaTipoReg(string s) {
     return aux;
 };
 
-
-int main() {
-
-    srand(static_cast<unsigned>(time(0)));
-
+int main()
+{
     // Cria uma instância da estrutura Arvore_avl
     Arvore_avl arv;
-    
+
     // Variáveis para armazenar dados temporários
-    string linha,nomeArquivo;
+    string linha, nomeArquivo;
     Tiporeg registro_temp;
-    
+
     // Variáveis de controle e armazenamento
     bool gerouTodas;
-    int chaveAleatoria = 0; 
+    int chaveAleatoria = 0;
     int totalPresente = 1;
     int totalAusente = 1;
-    char buffer[1000]; 
+    char buffer[1000];
     string vetorEncontradas[15];
     string vetorNaoEncontradas[15];
 
@@ -225,19 +238,22 @@ int main() {
 
     // para especificar o nome do arquivo que vai ser aberto
     nomeArquivo = "100_registros_desordenados.txt";
-    
-    ifstream arquivo("../Arquivos de Entrada/"+nomeArquivo);
+
+    ifstream arquivo("../Arquivos de Entrada/" + nomeArquivo);
 
     // Verifica se o arquivo foi aberto corretamente
-    if (!arquivo.is_open()) {
+    if (!arquivo.is_open())
+    {
         cerr << "Erro ao abrir o arquivo." << endl;
         return 1;
     }
 
     // Lê dados do arquivo e insere na árvore AVL
-    while (getline(arquivo, linha)) {
+    while (getline(arquivo, linha))
+    {
         string s = linha;
-        if (s != "") {
+        if (s != "")
+        {
             // Converte a linha do arquivo para a estrutura Tiporeg e insere na árvore AVL
             registro_temp = retornaTipoReg(s);
             arv.raiz = arv.inserir(arv.raiz, registro_temp);
@@ -247,17 +263,28 @@ int main() {
     // Fecha o arquivo após a leitura
     arquivo.close();
 
+    // Seed para gerar chaves diferentes
+    unsigned seed = time(NULL);
+
     // Realiza operações de busca aleatória na árvore AVL
-    while (!gerouTodas){
+    while (!gerouTodas)
+    {
+        srand(seed);
+
         // Gera uma chave aleatória entre 0 e 19999
-        if(totalAusente < 15)
+        if (totalAusente < 15)
+        {
             chaveAleatoria = rand() % 20000;
+        }
         else
+        {
             chaveAleatoria = rand() % 10000;
+        }
+        seed++;
 
         // Reinicia o contador de interações
         arv.numero_interacoes = 0;
-        
+
         // Inicia a contagem do tempo de busca
         auto start_time = chrono::high_resolution_clock::now();
 
@@ -269,32 +296,37 @@ int main() {
         chrono::duration<double> elapsed_time = end_time - start_time;
 
         // Armazena resultados da busca em vetores
-        if (resultadoChaveEncontrada) {
-            if(totalPresente <= 15){
+        if (resultadoChaveEncontrada)
+        {
+            if (totalPresente <= 15)
+            {
                 // Formata a mensagem e armazena no vetor de chaves encontradas
-                sprintf(buffer, "Chave (%.6d) encontrada na árvore. Tempo de busca: %.9f segundos. Interações: %d", chaveAleatoria,elapsed_time.count(), arv.numero_interacoes);
-                vetorEncontradas[totalPresente-1] = buffer;
+                sprintf(buffer, "Chave (%.6d) encontrada na árvore. Tempo de busca: %.9f segundos. Interações: %d", chaveAleatoria, elapsed_time.count(), arv.numero_interacoes);
+                vetorEncontradas[totalPresente - 1] = buffer;
                 totalPresente++;
             }
-        } else {
-            if(totalAusente <= 15){
+        }
+        else
+        {
+            if (totalAusente <= 15)
+            {
                 // Formata a mensagem e armazena no vetor de chaves não encontradas
-                sprintf(buffer, "Chave (%.6d) não encontrada na árvore. Tempo de busca: %.9f segundos. Interações: %d", chaveAleatoria ,elapsed_time.count(), arv.numero_interacoes);
-                vetorNaoEncontradas[totalAusente-1] = buffer;
+                sprintf(buffer, "Chave (%.6d) não encontrada na árvore. Tempo de busca: %.9f segundos. Interações: %d", chaveAleatoria, elapsed_time.count(), arv.numero_interacoes);
+                vetorNaoEncontradas[totalAusente - 1] = buffer;
                 totalAusente++;
             }
         }
 
         // Verifica se todas as chaves foram geradas e encontradas
-        gerouTodas = ((totalAusente==16)&&(totalPresente==16));
-
+        gerouTodas = ((totalAusente == 16) && (totalPresente == 16));
     }
 
     // Abre o arquivo de saída "arquivo_saida.txt"
-    ofstream arquivo_saida("Arquivos de Saida/arvore_avl/arquivo_saida_"+nomeArquivo);
+    ofstream arquivo_saida("Arquivos de Saida/arvore_avl/arquivo_saida_" + nomeArquivo);
 
     // Verifica se o arquivo de saída foi aberto corretamente
-    if (!arquivo_saida.is_open()) {
+    if (!arquivo_saida.is_open())
+    {
         cerr << "Erro ao abrir o arquivo de saída." << endl;
         return 1;
     }
