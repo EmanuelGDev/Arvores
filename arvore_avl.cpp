@@ -195,7 +195,7 @@ Tiporeg retornaTipoReg(string s)
     string auxS = s;
 
     // Define o delimitador como ";"
-    string delimiter = ";";
+    string delimiter = " ";
 
     // Encontra a posição do primeiro delimitador na string
     int pos = s.find(delimiter);
@@ -238,7 +238,7 @@ int main()
     arv.raiz = nullptr;
 
     // para especificar o nome do arquivo que vai ser aberto
-    nomeArquivo = "100_registros_ordenados.txt";
+    nomeArquivo = "50000_registros_ordenados.txt";
 
     ifstream arquivo("./Arquivos de Entrada/" + nomeArquivo);
 
@@ -272,13 +272,12 @@ int main()
     {
         srand(seed);
 
-        // Gera uma chave aleatória entre 0 e 19999
         if (totalAusente < 15)
         {
-            chaveAleatoria = rand() % 20000;
+            chaveAleatoria = rand() % 100000;
         }
         else
-        {    chaveAleatoria = rand() % 10000;
+        {    chaveAleatoria = rand() % 100000;
         }
         seed++;
 

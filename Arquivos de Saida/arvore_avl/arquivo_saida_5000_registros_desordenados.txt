@@ -1,0 +1,30 @@
+Chave (001758) encontrada na árvore. Tempo de busca: 0.000000241 segundos. Interações: 10
+Chave (001117) encontrada na árvore. Tempo de busca: 0.000000191 segundos. Interações: 11
+Chave (000346) encontrada na árvore. Tempo de busca: 0.000000141 segundos. Interações: 9
+Chave (002029) encontrada na árvore. Tempo de busca: 0.000000150 segundos. Interações: 8
+Chave (003534) encontrada na árvore. Tempo de busca: 0.000000160 segundos. Interações: 11
+Chave (000272) encontrada na árvore. Tempo de busca: 0.000000150 segundos. Interações: 10
+Chave (003286) encontrada na árvore. Tempo de busca: 0.000000100 segundos. Interações: 8
+Chave (002945) encontrada na árvore. Tempo de busca: 0.000000201 segundos. Interações: 11
+Chave (004478) encontrada na árvore. Tempo de busca: 0.000000201 segundos. Interações: 12
+Chave (004496) encontrada na árvore. Tempo de busca: 0.000000130 segundos. Interações: 12
+Chave (004008) encontrada na árvore. Tempo de busca: 0.000000160 segundos. Interações: 9
+Chave (000145) encontrada na árvore. Tempo de busca: 0.000000180 segundos. Interações: 12
+Chave (004691) encontrada na árvore. Tempo de busca: 0.000000211 segundos. Interações: 11
+Chave (002029) encontrada na árvore. Tempo de busca: 0.000000050 segundos. Interações: 8
+Chave (001661) encontrada na árvore. Tempo de busca: 0.000000161 segundos. Interações: 10
+Chave (058262) não encontrada na árvore. Tempo de busca: 0.000000250 segundos. Interações: 12
+Chave (045267) não encontrada na árvore. Tempo de busca: 0.000000090 segundos. Interações: 12
+Chave (043735) não encontrada na árvore. Tempo de busca: 0.000000050 segundos. Interações: 12
+Chave (038690) não encontrada na árvore. Tempo de busca: 0.000000050 segundos. Interações: 12
+Chave (064101) não encontrada na árvore. Tempo de busca: 0.000000050 segundos. Interações: 12
+Chave (071248) não encontrada na árvore. Tempo de busca: 0.000000040 segundos. Interações: 12
+Chave (033595) não encontrada na árvore. Tempo de busca: 0.000000050 segundos. Interações: 12
+Chave (076860) não encontrada na árvore. Tempo de busca: 0.000000061 segundos. Interações: 12
+Chave (027778) não encontrada na árvore. Tempo de busca: 0.000000090 segundos. Interações: 12
+Chave (040272) não encontrada na árvore. Tempo de busca: 0.000000040 segundos. Interações: 12
+Chave (017002) não encontrada na árvore. Tempo de busca: 0.000000040 segundos. Interações: 12
+Chave (018421) não encontrada na árvore. Tempo de busca: 0.000000050 segundos. Interações: 12
+Chave (060904) não encontrada na árvore. Tempo de busca: 0.000000050 segundos. Interações: 12
+Chave (087131) não encontrada na árvore. Tempo de busca: 0.000000050 segundos. Interações: 12
+Chave (034414) não encontrada na árvore. Tempo de busca: 0.000000050 segundos. Interações: 12

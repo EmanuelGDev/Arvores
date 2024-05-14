@@ -1,7 +1,16 @@
 .vscode
 
 #executaveis
-  .exe
+*.exe
 
+#arquivos de entrada grandes
 
+./Arquivos de Entrada/5000_registros_desordenados
+./Arquivos de Entrada/5000_registros_ordenados
+./Arquivos de Entrada/10000_registros_desordenados
+./Arquivos de Entrada/10000_registros_ordenados
+./Arquivos de Entrada/20000_registros_desordenados
+./Arquivos de Entrada/20000_registros_ordenados
+./Arquivos de Entrada/50000_registros_desordenados
+./Arquivos de Entrada/50000_registros_ordenados
 

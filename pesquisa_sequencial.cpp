@@ -19,7 +19,7 @@ struct Tiporeg
 Tiporeg retornaTipoReg(string s) {
     Tiporeg aux;
     string auxS = s;
-    string delimiter = ";";
+    string delimiter = " ";
     int pos = s.find(delimiter);
 
     // Extrai a chave da string e a converte para um inteiro
@@ -48,8 +48,9 @@ int main() {
     string vetorEncontradas[16];
     string vetorNaoEncontradas[16];
     char buffer[1000];
+    int comparacoes = 0;
 
-    nomeArquivo = "500_registros_desordenados.txt";  // Nome do arquivo de entrada
+    nomeArquivo = "50000_registros_ordenados.txt";  // Nome do arquivo de entrada
     ifstream arquivo("./Arquivos de Entrada/" + nomeArquivo);
 
     if (!arquivo.is_open()) {
@@ -57,7 +58,7 @@ int main() {
         return 1;  // Encerra o programa com código de erro
     }
 
-    Tiporeg *dados = new Tiporeg[100];  // Aloca dinamicamente memória para um array de estruturas
+    Tiporeg *dados = new Tiporeg[50000];  // Aloca dinamicamente memória para um array de estruturas
     int index = 0;
 
     while (getline(arquivo, linha)) {
@@ -76,19 +77,19 @@ int main() {
 
         srand(seed);
         if (totalAusente < 15){
-            chaveAleatoria = rand() % 1000000;
+            chaveAleatoria = rand() % 100000;
         }
         else{
-            chaveAleatoria = rand() % 1000000;
+            chaveAleatoria = rand() % 100000;
         }
         seed++;
 
         auto start_time = chrono::high_resolution_clock::now();  // Marca o início do cronômetro
 
-        bool chaveEncontrada = false;
-        int comparacoes = 0;  // Contador de comparações
+        bool chaveEncontrada = false;  
+        comparacoes = 0;// Contador de comparações
 
-        for (int i = 0; i < 100; i++) {
+        for (int i = 0; i < 50000; i++) {
             comparacoes++;  // Incrementa o contador a cada comparação
             if (dados[i].chave == chaveAleatoria) {
                 chaveEncontrada = true;
@@ -101,13 +102,13 @@ int main() {
 
         if (chaveEncontrada) {
             if (totalPresente <= 15) {
-                sprintf(buffer, "Chave (%.6d) encontrada na coleção. Tempo de busca: %.9f segundos. Número de comparações: %d", chaveAleatoria, elapsed_time.count(), comparacoes);
+                sprintf(buffer, "Chave: [%.6d] ENCONTRADA na coleção. TEMPO DE BUSCA: %.9f segundos. INTERACOES: %d", chaveAleatoria, elapsed_time.count(), comparacoes);
                 vetorEncontradas[totalPresente - 1] = buffer;
                 totalPresente++;
             }
         } else {
             if (totalAusente <= 15) {
-                sprintf(buffer, "Chave (%.6d) não encontrada na coleção. Tempo de busca: %.9f segundos. Número de comparações: %d", chaveAleatoria, elapsed_time.count(), comparacoes);
+                sprintf(buffer, "Chave: [%.6d] NAO ENCONTRADA na coleção. TEMPO DE BUSCA: %.9f segundos. INTERACOES: %d", chaveAleatoria, elapsed_time.count(), comparacoes);
                 vetorNaoEncontradas[totalAusente - 1] = buffer;
                 totalAusente++;
             }
