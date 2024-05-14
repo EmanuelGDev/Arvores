@@ -6,6 +6,7 @@
 #include <cstring>
 #include <iomanip>
 #include <chrono>
+#include <cstdlib>
 using namespace std;
 
 struct Tiporeg
@@ -18,13 +19,14 @@ struct Tiporeg
 struct No
 {
     Tiporeg registro;
-    No* esquerda;
-    No* direita;
+    No *esquerda;
+    No *direita;
 };
 
-No* novoNo(Tiporeg pRegistro) {
+No *novoNo(Tiporeg pRegistro)
+{
     // Cria um novo nó na memória
-    No* no = new No();
+    No *no = new No();
 
     // Define o registro do novo nó com o registro passado como parâmetro
     no->registro = pRegistro;
@@ -37,15 +39,17 @@ No* novoNo(Tiporeg pRegistro) {
     return no;
 }
 
-
-struct ArvoreBinaria {
-    No* raiz;               // Ponteiro para o nó raiz da árvore
-    int numero_interacoes;  // Variável para contar o número de interações durante as operações
+struct ArvoreBinaria
+{
+    No *raiz;              // Ponteiro para o nó raiz da árvore
+    int numero_interacoes; // Variável para contar o número de interações durante as operações
 
     // Função para inserir um novo nó na árvore
-    No* inserir(No* no, Tiporeg registro) {
+    No *inserir(No *no, Tiporeg registro)
+    {
         // Se o nó atual é nulo, cria um novo nó com o registro fornecido
-        if (no == nullptr) return novoNo(registro);
+        if (no == nullptr)
+            return novoNo(registro);
 
         // Se a chave do registro é menor que a chave do nó atual, insere na subárvore esquerda
         if (registro.chave < no->registro.chave)
@@ -59,20 +63,24 @@ struct ArvoreBinaria {
     }
 
     // Função para buscar uma chave na árvore binária
-    bool Buscar(No* no, int chave) {
+    bool Buscar(No *no, int chave)
+    {
         // Se o nó é nulo, a chave não foi encontrada na árvore
-        if (no == nullptr) {
+        if (no == nullptr)
+        {
             return false;
         }
         // Se a chave é menor que a chave do nó atual, busca na subárvore esquerda
-        else if (chave < no->registro.chave){
+        else if (chave < no->registro.chave)
+        {
             // Incrementa o número de interações (comparações) realizadas durante a busca
             numero_interacoes++;
             // Chama a função de busca recursivamente na subárvore esquerda
             return Buscar(no->esquerda, chave);
         }
         // Se a chave é maior que a chave do nó atual, busca na subárvore direita
-        else if (chave > no->registro.chave){
+        else if (chave > no->registro.chave)
+        {
             // Incrementa o número de interações (comparações) realizadas durante a busca
             numero_interacoes++;
             // Chama a função de busca recursivamente na subárvore direita
@@ -84,8 +92,8 @@ struct ArvoreBinaria {
     }
 };
 
-
-Tiporeg retornaTipoReg(string s) {
+Tiporeg retornaTipoReg(string s)
+{
     // Cria uma variável do tipo Tiporeg para armazenar os dados extraídos da string
     Tiporeg aux;
 
@@ -114,17 +122,15 @@ Tiporeg retornaTipoReg(string s) {
     return aux;
 };
 
-int main() {
-    // Inicializa o gerador de números aleatórios com uma semente baseada no tempo atual
-    srand(static_cast<unsigned>(time(0)));
-
-    // Cria uma instância da estrutura ArvoreBinaria
+int main()
+{
+     // Cria uma instância da estrutura ArvoreBinaria
     ArvoreBinaria arv;
 
     // Variáveis para leitura do arquivo e controle
-    string linha,nomeArquivo;
+    string linha, nomeArquivo;
     bool gerouTodas;
-    int chaveAleatoria = 0; 
+    int chaveAleatoria = 0;
     int totalPresente = 1;
     int totalAusente = 1;
     string vetorEncontradas[16];
@@ -137,18 +143,21 @@ int main() {
     // para especificar o nome do arquivo que vai ser aberto
     nomeArquivo = "100_registros_desordenados.txt";
 
-    ifstream arquivo("./Arquivos de Entrada/"+nomeArquivo);
+    ifstream arquivo("./Arquivos de Entrada/" + nomeArquivo);
 
     // Verifica se o arquivo foi aberto corretamente
-    if (!arquivo.is_open()) {
+    if (!arquivo.is_open())
+    {
         cerr << "Erro ao abrir o arquivo." << endl;
         return 1;
     }
 
     // Lê dados do arquivo e insere na árvore binária de busca
-    while (getline(arquivo, linha)) {
+    while (getline(arquivo, linha))
+    {
         string linhaAux = linha;
-        if (linhaAux != "") {
+        if (linhaAux != "")
+        {
             // Converte a linha do arquivo para a estrutura Tiporeg e insere na árvore
             Tiporeg auxiliar = retornaTipoReg(linha);
             arv.raiz = arv.inserir(arv.raiz, auxiliar);
@@ -158,17 +167,26 @@ int main() {
     // Fecha o arquivo após a leitura
     arquivo.close();
 
+    //Seed para gerar chaves diferentes
+    int i = 0;
+    srand(2112);
     // Realiza operações de busca aleatória na árvore binária
-    while (!gerouTodas){
-        // Gera uma chave aleatória entre 0 e 19999
-        if(totalAusente < 15)
-            chaveAleatoria = rand() % 20000;
+    while (!gerouTodas)
+    {
+        // Gera uma chave aleatória
+        if (totalAusente < 15)
+        {
+            chaveAleatoria = rand();
+        }
         else
-            chaveAleatoria = rand() % 10000;
-
+        {
+            chaveAleatoria = rand();
+        }
+        i++;
+        
         // Reinicia o contador de interações
         arv.numero_interacoes = 0;
-        
+
         // Inicia a contagem do tempo de busca
         auto start_time = chrono::high_resolution_clock::now();
 
@@ -180,31 +198,37 @@ int main() {
         chrono::duration<double> elapsed_time = end_time - start_time;
 
         // Armazena resultados da busca em vetores
-        if (resultadoChaveEncontrada) {
-            if(totalPresente <= 15){
+        if (resultadoChaveEncontrada)
+        {
+            if (totalPresente <= 15)
+            {
                 // Formata a mensagem e armazena no vetor de chaves encontradas
-                sprintf(buffer, "Chave (%.6d) encontrada na árvore. Tempo de busca: %.9f segundos. Interações: %d", chaveAleatoria,elapsed_time.count(), arv.numero_interacoes);
-                vetorEncontradas[totalPresente-1] = buffer;
+                sprintf(buffer, "Chave (%.6d) encontrada na árvore. Tempo de busca: %.9f segundos. Interações: %d", chaveAleatoria, elapsed_time.count(), arv.numero_interacoes);
+                vetorEncontradas[totalPresente - 1] = buffer;
                 totalPresente++;
             }
-        } else {
-            if(totalAusente <= 15){
+        }
+        else
+        {
+            if (totalAusente <= 15)
+            {
                 // Formata a mensagem e armazena no vetor de chaves não encontradas
-                sprintf(buffer, "Chave (%.6d) não encontrada na árvore. Tempo de busca: %.9f segundos. Interações: %d", chaveAleatoria ,elapsed_time.count(), arv.numero_interacoes);
-                vetorNaoEncontradas[totalAusente-1] = buffer;
+                sprintf(buffer, "Chave (%.6d) não encontrada na árvore. Tempo de busca: %.9f segundos. Interações: %d", chaveAleatoria, elapsed_time.count(), arv.numero_interacoes);
+                vetorNaoEncontradas[totalAusente - 1] = buffer;
                 totalAusente++;
             }
         }
 
         // Verifica se todas as chaves foram geradas e encontradas
-        gerouTodas = ((totalAusente==16)&&(totalPresente==16));
+        gerouTodas = ((totalAusente == 16) && (totalPresente == 16));
     }
 
     // Abre o arquivo de saída "arquivo_saida.txt"
-    ofstream arquivo_saida("./Arquivos de Saida/arvore_binaria/arquivo_saida_"+nomeArquivo);
+    ofstream arquivo_saida("./Arquivos de Saida/arvore_binaria/arquivo_saida_" + nomeArquivo);
 
     // Verifica se o arquivo de saída foi aberto corretamente
-    if (!arquivo_saida.is_open()) {
+    if (!arquivo_saida.is_open())
+    {
         cerr << "Erro ao abrir o arquivo de saída." << endl;
         return 1;
     }
