@@ -2,10 +2,11 @@
 #include <fstream>
 #include <string>
 #include <sstream>
-#include <ctime>
+#include <time.h>
 #include <cstring>
 #include <iomanip>
 #include <chrono>
+#include <cstdlib>
 using namespace std;
 
 // Declaração do tipo de registro presente em cada nó
@@ -237,9 +238,9 @@ int main()
     arv.raiz = nullptr;
 
     // para especificar o nome do arquivo que vai ser aberto
-    nomeArquivo = "100_registros_desordenados.txt";
+    nomeArquivo = "100_registros_ordenados.txt";
 
-    ifstream arquivo("../Arquivos de Entrada/" + nomeArquivo);
+    ifstream arquivo("./Arquivos de Entrada/" + nomeArquivo);
 
     // Verifica se o arquivo foi aberto corretamente
     if (!arquivo.is_open())
@@ -277,8 +278,7 @@ int main()
             chaveAleatoria = rand() % 20000;
         }
         else
-        {
-            chaveAleatoria = rand() % 10000;
+        {    chaveAleatoria = rand() % 10000;
         }
         seed++;
 
@@ -322,7 +322,7 @@ int main()
     }
 
     // Abre o arquivo de saída "arquivo_saida.txt"
-    ofstream arquivo_saida("Arquivos de Saida/arvore_avl/arquivo_saida_" + nomeArquivo);
+    ofstream arquivo_saida("./Arquivos de Saida/arvore_avl/arquivo_saida_" + nomeArquivo);
 
     // Verifica se o arquivo de saída foi aberto corretamente
     if (!arquivo_saida.is_open())

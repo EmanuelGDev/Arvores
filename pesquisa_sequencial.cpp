@@ -50,7 +50,7 @@ int main() {
     char buffer[1000];
 
     nomeArquivo = "100_registros_ordenados.txt";  // Nome do arquivo de entrada
-    ifstream arquivo("../Arquivos de Entrada/" + nomeArquivo);
+    ifstream arquivo("./Arquivos de Entrada/" + nomeArquivo);
 
     if (!arquivo.is_open()) {
         cerr << "Erro ao abrir o arquivo." << endl;  // Exibe uma mensagem de erro se a abertura falhar
@@ -109,7 +109,7 @@ int main() {
         gerouTodas = ((totalAusente == 16) && (totalPresente == 16));
     }
 
-    ofstream arquivo_saida("Arquivos de Saida/pesquisa_sequencial/arquivo_saida_" + nomeArquivo);  // Abre arquivo de saída
+    ofstream arquivo_saida("./Arquivos de Saida/pesquisa_sequencial/arquivo_saida_" + nomeArquivo);  // Abre arquivo de saída
 
     if (!arquivo_saida.is_open()) {
         cerr << "Erro ao abrir o arquivo de saída." << endl;  // Exibe mensagem de erro se a abertura do arquivo de saída falhar

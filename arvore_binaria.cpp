@@ -141,7 +141,7 @@ int main()
     arv.raiz = nullptr;
 
     // para especificar o nome do arquivo que vai ser aberto
-    nomeArquivo = "100_registros_desordenados.txt";
+    nomeArquivo = "2000000_registros_desordenados.txt";
 
     ifstream arquivo("./Arquivos de Entrada/" + nomeArquivo);
 
@@ -178,11 +178,11 @@ int main()
         // Gera uma chave aleatória
         if (totalAusente < 15)
         {
-            chaveAleatoria = rand() % 20000;
+            chaveAleatoria = rand() % 1000000000;
         }
         else
         {
-            chaveAleatoria = rand() % 10000;
+            chaveAleatoria = rand() % 1000000000;
         }
         seed++;
 
@@ -205,7 +205,7 @@ int main()
             if (totalPresente <= 15)
             {
                 // Formata a mensagem e armazena no vetor de chaves encontradas
-                sprintf(buffer, "Chave (%.6d) encontrada na árvore. Tempo de busca: %.9f segundos. Interaçoes: %d", chaveAleatoria, elapsed_time.count(), arv.numero_interacoes);
+                sprintf(buffer, "Chave (%.9d) encontrada na árvore. Tempo de busca: %.9f segundos. Interaçoes: %d", chaveAleatoria, elapsed_time.count(), arv.numero_interacoes);
                 vetorEncontradas[totalPresente - 1] = buffer;
                 totalPresente++;
             }

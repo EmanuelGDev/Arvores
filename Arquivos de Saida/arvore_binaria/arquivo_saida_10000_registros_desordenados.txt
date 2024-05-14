@@ -1,0 +1,30 @@
+Chave (006123) encontrada na árvore. Tempo de busca: 0.000000451 segundos. Interaçoes: 25
+Chave (009731) encontrada na árvore. Tempo de busca: 0.000000210 segundos. Interaçoes: 12
+Chave (002680) encontrada na árvore. Tempo de busca: 0.000000421 segundos. Interaçoes: 19
+Chave (002444) encontrada na árvore. Tempo de busca: 0.000000060 segundos. Interaçoes: 9
+Chave (003051) encontrada na árvore. Tempo de busca: 0.000000191 segundos. Interaçoes: 14
+Chave (004760) encontrada na árvore. Tempo de busca: 0.000000441 segundos. Interaçoes: 26
+Chave (005673) encontrada na árvore. Tempo de busca: 0.000000220 segundos. Interaçoes: 14
+Chave (004377) encontrada na árvore. Tempo de busca: 0.000000220 segundos. Interaçoes: 17
+Chave (003104) encontrada na árvore. Tempo de busca: 0.000000230 segundos. Interaçoes: 19
+Chave (005203) encontrada na árvore. Tempo de busca: 0.000000201 segundos. Interaçoes: 17
+Chave (003710) encontrada na árvore. Tempo de busca: 0.000000291 segundos. Interaçoes: 21
+Chave (002951) encontrada na árvore. Tempo de busca: 0.000000471 segundos. Interaçoes: 14
+Chave (009222) encontrada na árvore. Tempo de busca: 0.000000200 segundos. Interaçoes: 14
+Chave (000369) encontrada na árvore. Tempo de busca: 0.000000261 segundos. Interaçoes: 12
+Chave (006039) encontrada na árvore. Tempo de busca: 0.000000170 segundos. Interaçoes: 15
+Chave (011831) não encontrada na arvore. Tempo de busca: 0.000000251 segundos. Interaçoes: 5
+Chave (013271) não encontrada na arvore. Tempo de busca: 0.000000040 segundos. Interaçoes: 5
+Chave (018116) não encontrada na arvore. Tempo de busca: 0.000000070 segundos. Interaçoes: 5
+Chave (011419) não encontrada na arvore. Tempo de busca: 0.000000040 segundos. Interaçoes: 5
+Chave (016007) não encontrada na arvore. Tempo de busca: 0.000000030 segundos. Interaçoes: 5
+Chave (014351) não encontrada na arvore. Tempo de busca: 0.000000030 segundos. Interaçoes: 5
+Chave (019717) não encontrada na arvore. Tempo de busca: 0.000000030 segundos. Interaçoes: 5
+Chave (016034) não encontrada na arvore. Tempo de busca: 0.000000030 segundos. Interaçoes: 5
+Chave (011834) não encontrada na arvore. Tempo de busca: 0.000000020 segundos. Interaçoes: 5
+Chave (016444) não encontrada na arvore. Tempo de busca: 0.000000030 segundos. Interaçoes: 5
+Chave (016882) não encontrada na arvore. Tempo de busca: 0.000000030 segundos. Interaçoes: 5
+Chave (015832) não encontrada na arvore. Tempo de busca: 0.000000030 segundos. Interaçoes: 5
+Chave (016247) não encontrada na arvore. Tempo de busca: 0.000000030 segundos. Interaçoes: 5
+Chave (010274) não encontrada na arvore. Tempo de busca: 0.000000030 segundos. Interaçoes: 5
+Chave (000000) não encontrada na arvore. Tempo de busca: 0.000000180 segundos. Interaçoes: 9
