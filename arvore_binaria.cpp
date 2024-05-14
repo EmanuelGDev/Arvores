@@ -137,7 +137,7 @@ int main() {
     // para especificar o nome do arquivo que vai ser aberto
     nomeArquivo = "100_registros_desordenados.txt";
 
-    ifstream arquivo("../Arquivos de Entrada/"+nomeArquivo);
+    ifstream arquivo("./Arquivos de Entrada/"+nomeArquivo);
 
     // Verifica se o arquivo foi aberto corretamente
     if (!arquivo.is_open()) {
@@ -201,7 +201,7 @@ int main() {
     }
 
     // Abre o arquivo de saída "arquivo_saida.txt"
-    ofstream arquivo_saida("Arquivos de Saida/arvore_binaria/arquivo_saida_"+nomeArquivo);
+    ofstream arquivo_saida("./Arquivos de Saida/arvore_binaria/arquivo_saida_"+nomeArquivo);
 
     // Verifica se o arquivo de saída foi aberto corretamente
     if (!arquivo_saida.is_open()) {
