@@ -2,10 +2,11 @@
 #include <fstream>
 #include <string>
 #include <sstream>
-#include <ctime>
+#include <time.h>
 #include <iomanip>
 #include <chrono>
 #include <cstring>
+#include <cstdlib>
 using namespace std;
 
 struct Tiporeg
@@ -38,7 +39,6 @@ Tiporeg retornaTipoReg(string s) {
 }
 
 int main() {
-    srand(static_cast<unsigned>(time(0)));  // Inicializa o gerador de números aleatórios
 
     string linha, nomeArquivo;
     bool gerouTodas;
@@ -49,7 +49,7 @@ int main() {
     string vetorNaoEncontradas[16];
     char buffer[1000];
 
-    nomeArquivo = "100_registros_ordenados.txt";  // Nome do arquivo de entrada
+    nomeArquivo = "500_registros_desordenados.txt";  // Nome do arquivo de entrada
     ifstream arquivo("./Arquivos de Entrada/" + nomeArquivo);
 
     if (!arquivo.is_open()) {
@@ -70,11 +70,18 @@ int main() {
 
     arquivo.close();  // Fecha o arquivo de entrada
 
+    unsigned seed = time(NULL);
+
     while (!gerouTodas) {
-        if (totalAusente < 15)
-            chaveAleatoria = rand() % 20000;
-        else
-            chaveAleatoria = rand() % 10000;
+
+        srand(seed);
+        if (totalAusente < 15){
+            chaveAleatoria = rand() % 1000000;
+        }
+        else{
+            chaveAleatoria = rand() % 1000000;
+        }
+        seed++;
 
         auto start_time = chrono::high_resolution_clock::now();  // Marca o início do cronômetro
 

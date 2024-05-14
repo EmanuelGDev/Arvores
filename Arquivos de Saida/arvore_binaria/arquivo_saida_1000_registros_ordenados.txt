@@ -1,30 +1,30 @@
-Chave (000404) encontrada na árvore. Tempo de busca: 0.000003116 segundos. Interaçoes: 403
-Chave (000108) encontrada na árvore. Tempo de busca: 0.000000470 segundos. Interaçoes: 107
-Chave (000233) encontrada na árvore. Tempo de busca: 0.000001012 segundos. Interaçoes: 232
-Chave (000268) encontrada na árvore. Tempo de busca: 0.000001182 segundos. Interaçoes: 267
-Chave (000466) encontrada na árvore. Tempo de busca: 0.000002003 segundos. Interaçoes: 465
-Chave (000746) encontrada na árvore. Tempo de busca: 0.000003426 segundos. Interaçoes: 745
-Chave (000703) encontrada na árvore. Tempo de busca: 0.000003417 segundos. Interaçoes: 702
-Chave (000559) encontrada na árvore. Tempo de busca: 0.000002695 segundos. Interaçoes: 558
-Chave (000800) encontrada na árvore. Tempo de busca: 0.000004028 segundos. Interaçoes: 799
-Chave (000982) encontrada na árvore. Tempo de busca: 0.000004508 segundos. Interaçoes: 981
-Chave (000297) encontrada na árvore. Tempo de busca: 0.000002184 segundos. Interaçoes: 296
-Chave (000616) encontrada na árvore. Tempo de busca: 0.000002715 segundos. Interaçoes: 615
-Chave (000961) encontrada na árvore. Tempo de busca: 0.000004087 segundos. Interaçoes: 960
-Chave (000207) encontrada na árvore. Tempo de busca: 0.000000812 segundos. Interaçoes: 206
-Chave (000865) encontrada na árvore. Tempo de busca: 0.000003617 segundos. Interaçoes: 864
-Chave (016603) não encontrada na arvore. Tempo de busca: 0.000004419 segundos. Interaçoes: 1000
-Chave (006942) não encontrada na arvore. Tempo de busca: 0.000004068 segundos. Interaçoes: 1000
-Chave (011658) não encontrada na arvore. Tempo de busca: 0.000004439 segundos. Interaçoes: 1000
-Chave (010428) não encontrada na arvore. Tempo de busca: 0.000004548 segundos. Interaçoes: 1000
-Chave (001738) não encontrada na arvore. Tempo de busca: 0.000004539 segundos. Interaçoes: 1000
-Chave (009080) não encontrada na arvore. Tempo de busca: 0.000004589 segundos. Interaçoes: 1000
-Chave (017735) não encontrada na arvore. Tempo de busca: 0.000004739 segundos. Interaçoes: 1000
-Chave (004472) não encontrada na arvore. Tempo de busca: 0.000004768 segundos. Interaçoes: 1000
-Chave (001104) não encontrada na arvore. Tempo de busca: 0.000004759 segundos. Interaçoes: 1000
-Chave (012833) não encontrada na arvore. Tempo de busca: 0.000004769 segundos. Interaçoes: 1000
-Chave (002812) não encontrada na arvore. Tempo de busca: 0.000004729 segundos. Interaçoes: 1000
-Chave (017391) não encontrada na arvore. Tempo de busca: 0.000004709 segundos. Interaçoes: 1000
-Chave (014602) não encontrada na arvore. Tempo de busca: 0.000004749 segundos. Interaçoes: 1000
-Chave (005070) não encontrada na arvore. Tempo de busca: 0.000004999 segundos. Interaçoes: 1000
-Chave (005325) não encontrada na arvore. Tempo de busca: 0.000005079 segundos. Interaçoes: 1000
+Chave: [000000347] ENCONTRADA na árvore. TEMPO DE BUSCA: 0.000002525 segundos. INTERACOES: 346
+Chave: [000000041] ENCONTRADA na árvore. TEMPO DE BUSCA: 0.000000201 segundos. INTERACOES: 40
+Chave: [000000815] ENCONTRADA na árvore. TEMPO DE BUSCA: 0.000003136 segundos. INTERACOES: 814
+Chave: [000000855] ENCONTRADA na árvore. TEMPO DE BUSCA: 0.000002966 segundos. INTERACOES: 854
+Chave: [000000386] ENCONTRADA na árvore. TEMPO DE BUSCA: 0.000001423 segundos. INTERACOES: 385
+Chave: [000000661] ENCONTRADA na árvore. TEMPO DE BUSCA: 0.000002615 segundos. INTERACOES: 660
+Chave: [000000392] ENCONTRADA na árvore. TEMPO DE BUSCA: 0.000001613 segundos. INTERACOES: 391
+Chave: [000000435] ENCONTRADA na árvore. TEMPO DE BUSCA: 0.000001703 segundos. INTERACOES: 434
+Chave: [000000639] ENCONTRADA na árvore. TEMPO DE BUSCA: 0.000002334 segundos. INTERACOES: 638
+Chave: [000000820] ENCONTRADA na árvore. TEMPO DE BUSCA: 0.000003467 segundos. INTERACOES: 819
+Chave: [000000959] ENCONTRADA na árvore. TEMPO DE BUSCA: 0.000004078 segundos. INTERACOES: 958
+Chave: [000000445] ENCONTRADA na árvore. TEMPO DE BUSCA: 0.000001814 segundos. INTERACOES: 444
+Chave: [000000621] ENCONTRADA na árvore. TEMPO DE BUSCA: 0.000002595 segundos. INTERACOES: 620
+Chave: [000000380] ENCONTRADA na árvore. TEMPO DE BUSCA: 0.000001372 segundos. INTERACOES: 379
+Chave: [000000708] ENCONTRADA na árvore. TEMPO DE BUSCA: 0.000002595 segundos. INTERACOES: 707
+Chave: [000003096] NÃO ENCONTRADA na arvore. TEMPO DE BUSCA: 0.000003697 segundos. INTERACOES: 1000
+Chave: [000003308] NÃO ENCONTRADA na arvore. TEMPO DE BUSCA: 0.000003486 segundos. INTERACOES: 1000
+Chave: [000004407] NÃO ENCONTRADA na arvore. TEMPO DE BUSCA: 0.000003436 segundos. INTERACOES: 1000
+Chave: [000002994] NÃO ENCONTRADA na arvore. TEMPO DE BUSCA: 0.000003656 segundos. INTERACOES: 1000
+Chave: [000007904] NÃO ENCONTRADA na arvore. TEMPO DE BUSCA: 0.000004118 segundos. INTERACOES: 1000
+Chave: [000009716] NÃO ENCONTRADA na arvore. TEMPO DE BUSCA: 0.000003456 segundos. INTERACOES: 1000
+Chave: [000007874] NÃO ENCONTRADA na arvore. TEMPO DE BUSCA: 0.000003416 segundos. INTERACOES: 1000
+Chave: [000006648] NÃO ENCONTRADA na arvore. TEMPO DE BUSCA: 0.000003477 segundos. INTERACOES: 1000
+Chave: [000006275] NÃO ENCONTRADA na arvore. TEMPO DE BUSCA: 0.000003437 segundos. INTERACOES: 1000
+Chave: [000003573] NÃO ENCONTRADA na arvore. TEMPO DE BUSCA: 0.000003556 segundos. INTERACOES: 1000
+Chave: [000008797] NÃO ENCONTRADA na arvore. TEMPO DE BUSCA: 0.000003587 segundos. INTERACOES: 1000
+Chave: [000009023] NÃO ENCONTRADA na arvore. TEMPO DE BUSCA: 0.000015359 segundos. INTERACOES: 1000
+Chave: [000004544] NÃO ENCONTRADA na arvore. TEMPO DE BUSCA: 0.000004358 segundos. INTERACOES: 1000
+Chave: [000001301] NÃO ENCONTRADA na arvore. TEMPO DE BUSCA: 0.000004218 segundos. INTERACOES: 1000
+Chave: [000006024] NÃO ENCONTRADA na arvore. TEMPO DE BUSCA: 0.000003436 segundos. INTERACOES: 1000
