@@ -1,6 +1,6 @@
 # Trabalho Prático de Algoritmo e Estrutura de Dados III
 
-Trabalho da Disciplica de Algoritimo e Estrutura de Dados III, que consiste na criação e comparação de três estruturas, uma Árvore Binária, Árvore AVL, e Pesquisa Sequencial, além de contar com um programa gerador de arquivos .txt que gera uma chave qualquer do tipo inteiro, um inteiro qualquer e um char de mil caracteres respectivamente. Nesse arquivo estará presente as intruções para a execução correta dos arquivos presentes nesse repositório.
+Trabalho da Disciplica de Algoritimo e Estrutura de Dados III usando a linguagem de programação C++, que consiste na criação e comparação de três estruturas, uma Árvore Binária, Árvore AVL, e Pesquisa Sequencial, além de contar com um programa gerador de arquivos .txt que gera uma chave qualquer do tipo inteiro, um inteiro qualquer e um char de mil caracteres respectivamente. Nesse arquivo estará presente as intruções para a execução correta dos arquivos presentes nesse repositório.
 
 ## Conteúdo
 
