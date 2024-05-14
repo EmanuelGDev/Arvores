@@ -168,22 +168,24 @@ int main()
     arquivo.close();
 
     //Seed para gerar chaves diferentes
-    int i = 0;
-    srand(2112);
+    int i = 1;
+    
     // Realiza operações de busca aleatória na árvore binária
     while (!gerouTodas)
     {
+        srand(time(0) + i);
+
         // Gera uma chave aleatória
         if (totalAusente < 15)
         {
-            chaveAleatoria = rand();
+            chaveAleatoria = rand() % 20000;
         }
         else
         {
-            chaveAleatoria = rand();
+            chaveAleatoria = rand() % 10000;
         }
         i++;
-        
+
         // Reinicia o contador de interações
         arv.numero_interacoes = 0;
 
