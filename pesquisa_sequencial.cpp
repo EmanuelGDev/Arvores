@@ -50,7 +50,7 @@ int main() {
     char buffer[1000];
     int comparacoes = 0;
 
-    nomeArquivo = "50000_registros_ordenados.txt";  // Nome do arquivo de entrada
+    nomeArquivo = "5000_registros_desordenados.txt";  // Nome do arquivo de entrada
     ifstream arquivo("./Arquivos de Entrada/" + nomeArquivo);
 
     if (!arquivo.is_open()) {
@@ -89,7 +89,7 @@ int main() {
         bool chaveEncontrada = false;  
         comparacoes = 0;// Contador de comparações
 
-        for (int i = 0; i < 50000; i++) {
+        for (int i = 0; i < 5000; i++) {
             comparacoes++;  // Incrementa o contador a cada comparação
             if (dados[i].chave == chaveAleatoria) {
                 chaveEncontrada = true;
